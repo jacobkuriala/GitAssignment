@@ -1,0 +1,55 @@
+(a) How many commits have been done to the repository by the end of step 8?
+
+3 commits had been done.
+1) modify readme.md
+2) update status.txt
+3)add answers.txt
+
+(b) When was the file .gitignore modified last?
+
+I am assuming this question is asking the last modified date of file in remote repository.
+Date:   Thu Sep 15 10:29:34 2016 -0400
+
+(c) How many times was each of the files inside the src folder modified? 	
+
+There were 2 commits to the src folder.
+In the first commit 4 files were added.
+A       src/edu/fsu/cs/cen5035/RoleGame.java
+A       src/edu/fsu/cs/cen5035/Sword.java
+A       src/edu/fsu/cs/cen5035/Weapon.java
+A       src/edu/fsu/cs/cen5035/WeaponFactory.java
+In the second commit one more file was added and one file was modified.
+A       src/edu/fsu/cs/cen5035/BasicWeapon.java
+M       src/edu/fsu/cs/cen5035/Sword.java
+
+So all files were added once. Additionally Sword.java was modified once.
+
+(d) What is the difference between git log and git status?
+
+git status is used to compare changes between the files in the working directory and the current 
+HEAD commit in the repository.
+
+git log is used to view the history of the commits in the repository. You can perform various 
+forms of filtering on the information about the commits by specifying options to the 
+git log command.
+
+(e) What command would you use to see the commits where "RoleGame.java"
+was one of the commited files?
+
+The command:
+gitk <path to the file> E.g (when in working directory) gitk src/edu/fsu/cs/cen5035/RoleGame.java
+opens a GUI showing the commits and the difference between the commits.
+
+The command:
+git log -- <path to filename> E.g. (when in working directory) git log -- src/edu/fsu/cs/cen5035/RoleGame.java
+shows commits history in the command line
+
+(f) What command would you use to see the commits whose commit message
+contains the word "file"?
+
+git log --grep='file'
+
+(g) What command would you use to see the commits made by "Alice" between
+09/01/2016 and 09/16/2016? 
+
+git log --author='Alice' --before='9/16/2016' --after='9/1/2016'
